@@ -1,19 +1,20 @@
 package org.javaPractice;
 
 public class Car {
-    private int doors;
+    private String doors;
     private String engine;
     private String driver;
     public  int speed;
+
     //==========================================================
-//    To generate getter and setter automatically
-//    Main menu > code > Generate... > Getter and Setter (choose based on your requrement) > Ok
-// ==========================================================
-    public Integer getDoors() {
+    //To generate getter and setter automatically (IDE :  IntelIJ)
+    //Main menu > code > Generate... > Getter and Setter (choose based on your requrement) > Ok
+    // ==========================================================
+    public String getDoors() {
         return doors;
     }
 
-    public void setDoors(int doors) {
+    public void setDoors(String doors) {
         this.doors = doors;
     }
 
@@ -39,5 +40,14 @@ public class Car {
 
     public void setEngine(String engine) {
         this.engine = engine;
+    }
+    // ==========================================================
+
+    public String run (){
+        if(doors.equals("closed") && engine.equals("on") && driver.equals("seated") && speed>0){
+            return "running";
+        }else{
+            return "stop";
+        }
     }
 }
